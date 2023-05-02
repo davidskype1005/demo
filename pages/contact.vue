@@ -6,44 +6,45 @@
     placeholder="Search"
   />
   <div class="bg-white">
-    <DynamicScroller
-      v-if="data"
-      class="virtual-list"
-      :min-item-size="54"
-      :items="filteredData"
-      useNativeScroll
-    >
-      <template v-slot="{ item, index, active }">
-        <DynamicScrollerItem
-          :item="item"
-          :active="active"
-          :size-dependencies="[item.title]"
-          :data-index="index"
-        >
-          <div class="thumbnail w-full md:w-1/2 m-auto pt-3">
-            <img
-              :src="item.thumbnail"
-              :key="item.thumbnail"
-              alt="thumbnail"
-              class="image w-full"
-            />
-          </div>
-          <div class="px-3 md:w-1/2 m-auto">
-            <div class="flex items-center justify-between pt-2">
-              <h2 class="my-brand">{{ item.brand }}</h2>
-              <span class="my-category">{{ item.category }}</span>
+    <template v-if="filteredData.length">
+      <DynamicScroller
+        class="virtual-list"
+        :min-item-size="54"
+        :items="filteredData"
+        useNativeScroll
+      >
+        <template v-slot="{ item, index, active }">
+          <DynamicScrollerItem
+            :item="item"
+            :active="active"
+            :size-dependencies="[item.title]"
+            :data-index="index"
+          >
+            <div class="thumbnail w-full md:w-1/2 m-auto pt-3">
+              <img
+                :src="item.thumbnail"
+                :key="item.thumbnail"
+                alt="thumbnail"
+                class="image w-full"
+              />
             </div>
-            <h2 class="">{{ item.title }}</h2>
-            <div class="text">{{ item.description }}</div>
-            <div class="flex justify-end">
-              <button class="show-more text-pri-content cursor-pointer mt-4">
-                more
-              </button>
+            <div class="px-3 md:w-1/2 m-auto">
+              <div class="flex items-center justify-between pt-2">
+                <h2 class="my-brand">{{ item.brand }}</h2>
+                <span class="my-category">{{ item.category }}</span>
+              </div>
+              <h2 class="">{{ item.title }}</h2>
+              <div class="text">{{ item.description }}</div>
+              <div class="flex justify-end">
+                <button class="show-more text-pri-content cursor-pointer mt-4">
+                  more
+                </button>
+              </div>
             </div>
-          </div>
-        </DynamicScrollerItem>
-      </template>
-    </DynamicScroller>
+          </DynamicScrollerItem>
+        </template>
+      </DynamicScroller>
+    </template>
   </div>
 </template>
 
