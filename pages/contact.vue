@@ -53,7 +53,7 @@ const listData = await useFetch("https://dummyjson.com/products?limit=100");
 const search = ref("");
 const filteredData = computed(() =>
   listData.data.value.products.filter((item) => {
-    if (!search.value) {
+    if (!search.value || !listData.data.value) {
       return true;
     }
     const searchTerm = search.value.toLowerCase();
