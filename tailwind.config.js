@@ -2,18 +2,15 @@
 module.exports = {
   theme: {
     extend: {
-      colors:{
+      colors: {
         pri: {
-          main:'#DECDBA',
-          content:'#FBFAEE',
-          title:'#9F7E69'
+          main: "#DECDBA",
+          content: "#FBFAEE",
+          title: "#9F7E69",
         },
-        sec: {
-          
-        },
-      }
+        sec: {},
+      },
     },
   },
   plugins: [],
-}
-
+};
