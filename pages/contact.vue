@@ -53,7 +53,7 @@ const data = ref([]);
 const search = ref("");
 const filteredData = computed(() =>
   data.value.filter((item) => {
-    if (!search.value) {
+    if (!search.value || !data.value) {
       return true;
     }
     const searchTerm = search.value.toLowerCase();
