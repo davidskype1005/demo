@@ -48,12 +48,12 @@
 
 <script setup>
 import { ref, computed } from "vue";
-const listData = await useFetch("https://dummyjson.com/products?limit=100");
-// console.log(listData.data.value)
+
+const data = ref([]);
 const search = ref("");
 const filteredData = computed(() =>
-  listData.data.value.products.filter((item) => {
-    if (!search.value || !listData.data.value) {
+  data.value.filter((item) => {
+    if (!search.value) {
       return true;
     }
     const searchTerm = search.value.toLowerCase();
@@ -64,11 +64,14 @@ const filteredData = computed(() =>
   })
 );
 
-// onMounted(async () => {
-//   const response = await fetch('https://dummyjson.com/products?limit=100')
-//   const jsonData = await response.json()
-//   data.value = jsonData.products.map((item, index) => ({ id: index, ...item }))
-// })
+onMounted(async () => {
+  const response = await fetch("https://dummyjson.com/products?limit=100");
+  const jsonData = await response.json();
+  console.log(jsonData);
+  data.value = jsonData.products;
+  console.log(data);
+});
+// const listData = await useFetch("https://dummyjson.com/products?limit=100");
 </script>
 
 <style scoped>
