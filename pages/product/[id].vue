@@ -41,10 +41,10 @@
     <swiper
       @swiper="setThumbsSwiper"
       :loop="true"
-      :spaceBetween="10"
-      :slidesPerView="4"
+      :spaceBetween="5"
+      :slidesPerView="3.5"
       :modules="modules"
-      class="mySwiper"
+      class="mySwiper mt-2 bg-black"
     >
       <swiper-slide
         ><img
