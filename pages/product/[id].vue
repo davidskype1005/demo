@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="">
     <swiper
       :loop="true"
       :spaceBetween="10"
       :thumbs="{ swiper: thumbsSwiper }"
       :modules="modules"
-      class="mySwiper2"
+      class="max-w-[280px]"
     >
       <swiper-slide
         ><img
@@ -44,7 +44,7 @@
       :spaceBetween="5"
       :slidesPerView="3.5"
       :modules="modules"
-      class="mySwiper mt-2 bg-black"
+      class="mt-2 max-w-[280px] bg-black"
     >
       <swiper-slide
         ><img
