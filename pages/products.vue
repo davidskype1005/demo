@@ -5,7 +5,7 @@
     v-model="search"
     placeholder="Search"
   />
-  <div class="bg-white">
+  <div class="bg-white pb-4">
     <template v-if="filteredData.length">
       <DynamicScroller
         class="virtual-list"

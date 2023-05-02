@@ -1,10 +1,7 @@
 <template>
-    <div>
-        <h1>這是首頁</h1>
-    </div>   
+  <div>
+    <h1 class="text-black">index</h1>
+  </div>
 </template>
-  
-<script setup>
 
-
-</script>
+<script setup></script>
