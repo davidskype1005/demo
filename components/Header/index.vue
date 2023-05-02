@@ -21,7 +21,7 @@
           <NuxtLink
             class="block py-1 px-3 hover:bg-gray-700 rounded"
             to="/products"
-            >products</NuxtLink
+            >Products</NuxtLink
           >
         </nav>
       </div>
@@ -42,7 +42,7 @@
           class="block py-1 px-3 hover:bg-gray-700 rounded"
           to="/products"
           @click="open = false"
-          >products</NuxtLink
+          >Products</NuxtLink
         >
       </div>
     </div>
