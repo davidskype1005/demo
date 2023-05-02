@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my-container{
+    max-width:1200px;
+    margin:auto;
+    @apply px-4 py-3 md:px-10;
+}
+
+.my-brand{
+    @apply text-lg font-bold text-pri-title py-2
+}
+
+.my-category{
+    @apply text-xs font-bold border-2 border-pri-title p-1 rounded-md
+}
+
+.show-more{
+    @apply bg-pri-title p-1 rounded-md
+}
