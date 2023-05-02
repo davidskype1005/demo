@@ -7,6 +7,7 @@
   />
   <div class="bg-white">
     <DynamicScroller
+      v-if="data"
       class="virtual-list"
       :min-item-size="54"
       :items="filteredData"
