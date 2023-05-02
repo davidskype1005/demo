@@ -4,7 +4,7 @@
       <div class="flex justify-between items-center">
         <div class="flex items-center">
           <img class="w-8 h-8" src="https://picsum.photos/500/400?random=2" />
-          <span class="ml-2 text-xl font-bold">My Website</span>
+          <span class="ml-2 text-xl font-bold">David’s Website</span>
         </div>
         <button class="block md:hidden text-3xl" @click="open = !open">
           <font-awesome-icon :icon="['fa-solid', 'fa-bars']" class="icon alt" />
@@ -20,8 +20,8 @@
           >
           <NuxtLink
             class="block py-1 px-3 hover:bg-gray-700 rounded"
-            to="/contact"
-            >Contact</NuxtLink
+            to="/products"
+            >products</NuxtLink
           >
         </nav>
       </div>
@@ -40,9 +40,9 @@
         >
         <NuxtLink
           class="block py-1 px-3 hover:bg-gray-700 rounded"
-          to="/contact"
+          to="/products"
           @click="open = false"
-          >Contact</NuxtLink
+          >products</NuxtLink
         >
       </div>
     </div>

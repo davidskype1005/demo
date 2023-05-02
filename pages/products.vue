@@ -73,16 +73,13 @@ onMounted(async () => {
     data.value = jsonData.products;
   } catch {
     data.value = [];
-    console.log(jsonData);
-    console.log(data);
   }
 });
-// const listData = await useFetch("https://dummyjson.com/products?limit=100");
 </script>
 
 <style scoped>
 .virtual-list {
-  height: calc(100vh - 200px);
+  height: calc(100vh - 220px);
 }
 ::-webkit-scrollbar {
   width: 6px;
