@@ -65,11 +65,15 @@ const filteredData = computed(() =>
 );
 
 onMounted(async () => {
-  const response = await fetch("https://dummyjson.com/products?limit=100");
-  const jsonData = await response.json();
-  console.log(jsonData);
-  data.value = jsonData.products;
-  console.log(data);
+  try {
+    const response = await fetch("https://dummyjson.com/products?limit=100");
+    const jsonData = await response.json();
+    console.log(jsonData);
+    data.value = jsonData.products;
+    console.log(data);
+  } catch {
+    data.value = [];
+  }
 });
 // const listData = await useFetch("https://dummyjson.com/products?limit=100");
 </script>
