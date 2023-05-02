@@ -36,7 +36,10 @@
               <h2 class="">{{ item.title }}</h2>
               <div class="text">{{ item.description }}</div>
               <div class="flex justify-end">
-                <button class="show-more text-pri-content cursor-pointer mt-4">
+                <button
+                  @click="goToDetail(item.id)"
+                  class="show-more text-pri-content cursor-pointer mt-4"
+                >
                   more
                 </button>
               </div>
@@ -49,7 +52,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+const router = useRouter();
 
 const data = ref([]);
 const search = ref("");
@@ -65,6 +68,10 @@ const filteredData = computed(() =>
     );
   })
 );
+
+const goToDetail = (id) => {
+  router.push(`/product/${id}`);
+};
 
 onMounted(async () => {
   try {
